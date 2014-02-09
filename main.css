@@ -3,7 +3,7 @@ body
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
-	background-color: #22aa22;
+	background-color: #fff;
 }
 
 #status
@@ -16,6 +16,25 @@ body
 	margin-top: 40px;
 	font-size: 50px;
 	text-align: center;
-	color: white;
+	color: black;
 	margin-left: -350px;
 }
+
+.ground
+{
+
+}
+
+.stars
+{
+
+}
+ 
+.cloud
+{
+	
+}
+
+/*
+ Plan: make sky.  Dark gradient and stars with offline, light gradient and clouds with online plus wake up music.
+ * */
