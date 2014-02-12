@@ -2,10 +2,6 @@ window.addEventListener('load', function()
 {
     var status = document.getElementById("status");
 
-    /*
- Check this
- * */
-
     function updateOnlineStatus(event)
     {
         var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
