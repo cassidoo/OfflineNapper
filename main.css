@@ -11,7 +11,7 @@ body
 	padding: 0px;
 	width: 100%;
 	height: 100%;
-	background: rgb(195,217,255);
+	background: paleturquoise; /*I think it's funny that this is actually a color*/
 }
 
 #status
@@ -31,13 +31,14 @@ body
 {
 	width: 100%;
 	height: 100%;
-	background: rgb(195,217,255); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(195,217,255,1) 0%, rgba(177,200,239,1) 41%, rgba(152,176,217,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(195,217,255,1)), color-stop(41%,rgba(177,200,239,1)), color-stop(100%,rgba(152,176,217,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(152,176,217,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(152,176,217,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(152,176,217,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(152,176,217,1) 100%); /* W3C */
+	/* I decided to go the creative route with the color names... */
+	background: paleturquoise; /* Old browsers */
+	background: -moz-linear-gradient(top, paleturquoise 0%, powderblue 41%, lightsteelblue 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,paleturquoise), color-stop(41%,powderblue), color-stop(100%,lightsteelblue)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, paleturquoise 0%,powderblue 41%,lightsteelblue 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, paleturquoise 0%,powderblue 41%,lightsteelblue 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, paleturquoise 0%,powderblue 41%,lightsteelblue 100%); /* IE10+ */
+	background: linear-gradient(to bottom, paleturquoise 0%,powderblue 41%,lightsteelblue 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=0 ); /* IE6-9 */
 }
 
@@ -47,7 +48,7 @@ body
 	width: 100%;
 	height: 100px;
 	bottom: 0px;
-	background: #339966;
+	background: yellowgreen;
 }
 
 .stars

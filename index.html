@@ -7,14 +7,52 @@
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900' rel='stylesheet' type='text/css'>
 		<link href='main.css' rel='stylesheet' type='text/css'>
 
-		<script src="checker.js"></script>
 	</head>
 	<body>
 		<div class="sky">
-			<div class="cloud"></div>
+			<div class="cloud">
+
+			</div>
 			<div id="status">
 				WORK TIME
 			</div>
+			<script>
+                // Thanks to Robert Nyman (robertnyman.com) for help!
+
+                (function()
+                {
+                    var displayOnlineStatus = document.getElementById("status"), isOnline = function()
+                    {
+                        displayOnlineStatus.innerHTML = "WORK TIME";
+                        displayOnlineStatus.className = "online";
+                    }, isOffline = function()
+                    {
+                        displayOnlineStatus.innerHTML = "NAP TIME";
+                        displayOnlineStatus.className = "offline";
+                    };
+
+                    if(window.addEventListener)
+                    {
+                        /*
+                         Works well in Firefox and Opera with the
+                         Work Offline option in the File menu.
+                         Pulling the ethernet cable doesn't seem to trigger it.
+                         Later Google Chrome and Safari seem to trigger it well
+                         */
+                        window.addEventListener("online", isOnline, false);
+                        window.addEventListener("offline", isOffline, false);
+                    }
+                    else
+                    {
+                        /*
+                         Works in IE with the Work Offline option in the
+                         File menu and pulling the ethernet cable
+                         */
+                        document.body.ononline = isOnline;
+                        document.body.onoffline = isOffline;
+                    }
+                })();
+			</script>
 			<div class="ground"></div>
 		</div>
 	</body>
