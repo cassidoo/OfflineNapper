@@ -14,6 +14,11 @@ body
 	background: paleturquoise; /*I think it's funny that this is actually a color*/
 }
 
+#environment
+{
+	height: 100%;
+}
+
 #status
 {
 	position: absolute;
@@ -31,6 +36,20 @@ body
 {
 	width: 100%;
 	height: 100%;
+}
+
+.ground
+{
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	bottom: 0px;
+}
+
+/* Online Environment */
+
+.online .sky
+{
 	/* I decided to go the creative route with the color names... */
 	background: paleturquoise; /* Old browsers */
 	background: -moz-linear-gradient(top, paleturquoise 0%, powderblue 41%, lightsteelblue 100%); /* FF3.6+ */
@@ -42,18 +61,33 @@ body
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=0 ); /* IE6-9 */
 }
 
-.ground
+.online .ground
 {
-	position: fixed;
-	width: 100%;
-	height: 100px;
-	bottom: 0px;
 	background: yellowgreen;
+}
+
+/* Offline Environment */
+
+.offline .sky
+{
+	background: black; /* Old browsers */
+	background: -moz-linear-gradient(top, black 0%, midnightblue 41%, cadetblue 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,paleturquoise), color-stop(41%,midnightblue), color-stop(100%,cadetblue)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, black 0%,midnightblue 41%,cadetblue 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, black 0%,midnightblue 41%,cadetblue 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, black 0%,midnightblue 41%,cadetblue 100%); /* IE10+ */
+	background: linear-gradient(to bottom, black 0%,midnightblue 41%,cadetblue 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=0 ); /* IE6-9 */
+}
+
+.offline .ground
+{
+	background: darkgreen;
 }
 
 .stars
 {
-display: none; /* During "daytime," don't display */
+	display: none; /* During "daytime," don't display */
 }
 
 .cloud
