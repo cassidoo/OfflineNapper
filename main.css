@@ -47,8 +47,6 @@ body
 	bottom: 0px;
 }
 
-/* Online Environment */
-
 .online .sky
 {
 	/* I decided to go the creative route with the color names... */
@@ -66,8 +64,6 @@ body
 {
 	background: yellowgreen;
 }
-
-/* Offline Environment */
 
 .offline .sky
 {
@@ -88,12 +84,17 @@ body
 
 .stars
 {
+	/* Gotta figure out how to do this without canvas... */
+}
+
+.online .stars
+{
 	display: none; /* During "daytime," don't display */
 }
 
-.cloudonline
+.offline .cloud, .offline .cloud:before, .offline .cloud:after
 {
-	
+	background: dimgray;
 }
 
 .cloud
