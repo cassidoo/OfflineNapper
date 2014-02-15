@@ -92,5 +92,38 @@ body
 
 .cloud
 {
-	/* Might steal this from my StarCatcher project just for time-saving purposes */
+	width: 200px;
+	height: 60px;
+	background: white;
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	position: relative;
+}
+
+.cloud:before, .cloud:after
+{
+	content: '';
+	position: absolute;
+	background: white;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	top: -15px;
+	left: 10px;
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after
+{
+	width: 120px;
+	height: 120px;
+	top: -55px;
+	left: auto;
+	right: 15px;
 }
