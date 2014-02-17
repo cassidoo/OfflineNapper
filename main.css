@@ -82,6 +82,26 @@ body
 	background: darkgreen;
 }
 
+.sun
+{
+	position: fixed;
+	right: 20%;
+	background: yellow;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	animation: sunshine 3s linear 0s infinite;
+	-webkit-animation: sunshine 3s linear 0s infinite;
+	-o-animation: sunshine 3s linear 0s infinite;
+}
+
+.offline .sun
+{
+	display: none; /* During "nighttime" don't display */
+}
+
 .stars
 {
 	/* Gotta figure out how to do this without canvas... */
@@ -162,6 +182,11 @@ body
 }
 
 /* Cloud animation */
+@keyframes moveclouds
+{
+0% {margin-left: 100%;}
+100% {margin-left: -500px;}
+}
 @-webkit-keyframes moveclouds {
 0% {margin-left: 100%;}
 100% {margin-left: -500px;}
@@ -173,4 +198,30 @@ body
 @-o-keyframes moveclouds {
 0% {margin-left: 100%;}
 100% {margin-left: -500px;}
+}
+
+/* Sun animation */
+@keyframes sunshine
+{
+0% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+50% {box-shadow: 0px 0px 20px 5px rgba(255,255,122,.5);}
+100% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+}
+@-webkit-keyframes sunshine
+{
+0% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+50% {box-shadow: 0px 0px 20px 5px rgba(255,255,122,.5);}
+100% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+}
+@-moz-keyframes sunshine
+{
+0% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+50% {box-shadow: 0px 0px 20px 5px rgba(255,255,122,.5);}
+100% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+}
+@-o-keyframes sunshine
+{
+0% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
+50% {box-shadow: 0px 0px 20px 5px rgba(255,255,122,.5);}
+100% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
 }
