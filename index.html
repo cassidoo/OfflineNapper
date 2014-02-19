@@ -17,6 +17,7 @@
 				<div id="status">
 					WORK TIME <!-- Operating under the assumption that they are online when they come to the site -->
 				</div>
+				<div id="advice"></div>
 				<audio id="alarm">
 					<source src="music/Pkmn Intro.m4r" type="audio/mpeg">
 					Your browser does not support the audio element.
@@ -28,10 +29,12 @@
                     {
                         var displayOnlineStatus = document.getElementById("status");
                         var environment = document.getElementById("environment");
+                        var advice = document.getElementById("advice");
 
                         var isOnline = function()
                         {
                             displayOnlineStatus.innerHTML = "WORK TIME";
+                            advice.innerHTML = "(click the tree to snooze)";
                             environment.className = "online";
                             document.getElementById("alarm").play();
                         };
@@ -39,6 +42,7 @@
                         var isOffline = function()
                         {
                             displayOnlineStatus.innerHTML = "NAP TIME";
+                            advice.innerHTML = "";
                             environment.className = "offline";
                         };
 
@@ -53,8 +57,24 @@
                             document.body.onoffline = isOffline;
                         }
                     })();
+                    function pausemusic()
+                    {
+                    	document.getElementById("alarm").pause();
+                    	document.getElementById("advice").innerHTML = "";
+                    }
 				</script>
 				<div class="sun"></div>
+
+				<div class="tree" onclick="pausemusic();">
+					<div class="one"></div>
+					<div class="two"></div>
+					<div class="three"></div>
+					<div class="four"></div>
+					<div class="five"></div>
+					<div class="six"></div>
+					<div class="seven"></div>
+				</div>
+				
 				<div class="ground"></div>
 			</div>
 		</div>

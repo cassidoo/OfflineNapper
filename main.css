@@ -33,6 +33,19 @@ body
 	margin-left: -350px;
 }
 
+#advice
+{
+	position: absolute;
+	width: 700px;
+	height: 80px;
+	left: 50%;
+	top: 50%;
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	margin-left: -350px;
+}
+
 .sky
 {
 	width: 100%;
@@ -100,16 +113,6 @@ body
 .offline .sun
 {
 	display: none; /* During "nighttime" don't display */
-}
-
-.stars
-{
-	/* Gotta figure out how to do this without canvas... */
-}
-
-.online .stars
-{
-	display: none; /* During "daytime," don't display */
 }
 
 .offline .cloud, .offline .cloud:before, .offline .cloud:after
@@ -225,3 +228,101 @@ body
 50% {box-shadow: 0px 0px 20px 5px rgba(255,255,122,.5);}
 100% {box-shadow: 0px 0px 40px 10px rgba(255,255,122,.5);}
 }
+
+/* Stuff for the stupidly extravagant tree */
+
+.tree .one
+{
+	right: 480px;
+	bottom: 0px;
+	width: 38px;
+	height: 212px;
+	background: sienna;
+	-webkit-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+	border-radius: 50%;
+	position: absolute;
+}
+.tree .two
+{
+	right: 500px;
+	bottom: 0px;
+	width: 50px;
+	height: 212px;
+	background: saddlebrown;
+	-webkit-transform: rotate(-8deg);
+	transform: rotate(-8deg);
+	border-radius: 50%;
+	position: absolute;
+}
+.tree .three
+{
+	right: 490px;
+	bottom: 230px;
+	width: 100px;
+	height: 100px;
+	background: greenyellow;
+	-webkit-transform: rotate(-16deg);
+	transform: rotate(-16deg);
+	border-radius: 50%;
+	position: absolute;
+}
+.tree .four
+{
+	right: 530px;
+	bottom: 230px;
+	width: 88px;
+	height: 88px;
+	background: yellowgreen;
+	-webkit-transform: rotate(-16deg);
+	transform: rotate(-16deg);
+	border-radius: 50%;
+	position: absolute;
+}
+.tree .five
+{
+	right: 460px;
+	bottom: 160px;
+	width: 102px;
+	height: 132px;
+	background: greenyellow;
+	-webkit-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	border-radius: 50%;
+	position: absolute;
+}
+.tree .six
+{
+	right: 540px;
+	bottom: 150px;
+	width: 88px;
+	height: 110px;
+	background: yellowgreen;
+	-webkit-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+	border-radius: 50%;
+	position: absolute;
+}
+.tree .seven
+{
+	right: 420px;
+	bottom: 200px;
+	width: 100px;
+	height: 110px;
+	background: greenyellow;
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.offline .tree .four, .offline .tree .six
+{
+	background: darkgreen;
+}
+
+.offline .tree .three, .offline .tree .five, .offline .tree .seven
+{
+	background: green;
+}
+
